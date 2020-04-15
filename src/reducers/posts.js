@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import * as constants from '../util/constants';
 
 export const posts = (state = [], action) => {

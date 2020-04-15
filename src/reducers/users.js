@@ -1,9 +1,9 @@
 import * as constants from '../util/constants';
 
-export const userProfile = (state = null, action) => {
+export const users = (state = [], action) => {
     switch (action.type) {
         case constants.FETCH_USER:
-            return action.payload;
+            return [...state, action.payload];
         default:
             return state;
     }
