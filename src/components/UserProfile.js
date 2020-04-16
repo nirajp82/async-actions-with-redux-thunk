@@ -1,12 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchUser } from '../actions';
 
 class userProfile extends React.Component {
-    componentDidMount() {
-        this.props.fetchUser(this.props.userId);
-    }
-
     render() {
         const user = this.props.user;
         if (!user) {
@@ -22,4 +17,4 @@ const mapStateToProps = (state, ownState) => {
     };
 };
 
-export default connect(mapStateToProps, { fetchUser })(userProfile);
+export default connect(mapStateToProps, null)(userProfile);
